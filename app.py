@@ -69,7 +69,11 @@ def main():
     # Muestra la cantidad de polos que se definen en la entrada de datos.
     st.header(f"{2*n} Polos")
     # Dibujar las líneas de flujo con mapa de colores y estilos apropiados.
-    color = 2 * np.log(np.hypot(res["Ex"], res["Ey"]))
+    try:
+        color = 2 * np.log(np.hypot(res["Ex"], res["Ey"]))
+    except RuntimeWarning:
+        color = 2
+
     ax.streamplot(
         res["x"],
         res["y"],

@@ -61,3 +61,13 @@ repos:
     hooks:
       - id: cfn-python-lint
         files: ^(template|ci).*\.(json|yml|yaml)$
+  - repo: git://github.com/luismayta/pre-commit-mypy
+    sha: ''  # Use the sha you want to point at
+    hooks:
+      - id: mypy
+        args:
+        - --ignore-missing-imports
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
+    sha: v1.0.4
+    hooks:
+      - id: python-bandit-vulnerability-check
