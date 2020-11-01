@@ -3,10 +3,6 @@ import numpy as np
 import streamlit as st
 from matplotlib.patches import Circle
 
-# https://github.com/ecrespo/codigo_blog/blob/master/graficacion/campoelectric/graficar%2Bcampo%2Belectrico.ipynb
-# https://github.com/ecrespo/codigo_blog/blob/master/graficacion/campoelectric/graficar%2Bcampo%2Belectrico.py
-# https://www.seraph.to/graficar-lineas-de-campo-electrico-con-matplotlib-y-python.html#graficar-lineas-de-campo-electrico-con-matplotlib-y-python
-
 
 @st.cache(allow_output_mutation=True)
 def magnetic_field_e(q, r0, x, y) -> tuple:
